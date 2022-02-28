@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "votezone_db";
+$dbname = "votezone_db"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
