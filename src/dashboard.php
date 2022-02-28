@@ -20,7 +20,7 @@ $conn->query("UPDATE zone SET flag='1' WHERE zonecode='".$_GET['ket']."'");
 // echo "You chose the following color(s): <br>";
 foreach ($ampur as $amp){ 
     // print $amp."<br />";
-    $conn->query("UPDATE campur SET zone='".$_GET['ket']."' WHERE ampurname='".$amp."'");
+    $conn->query("UPDATE campur SET zone='".$_GET['ket']."' WHERE ampurcodefull='".$amp."'");
 }
 foreach ($tambon as $tam){ 
     // print $tam."<br />";
