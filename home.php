@@ -48,7 +48,7 @@
           <a class="text-primary nav-link" href="ShowDasbord.php">Dashboard</a>
         </li>
         <li class="nav-item active">
-          <a class="text-danger nav-link" type="btn btn-danger" href="reset.php">reset</a>
+          <a class="text-danger nav-link" type="btn btn-danger" href="reset.php">Reset</a>
         </li>
       </ul>
     </div>
@@ -68,6 +68,8 @@
   </div>
 </div>
 <!-- end card-body -->
+
+
 
 
 
