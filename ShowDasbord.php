@@ -105,7 +105,8 @@
       }
    ?>
 
-<div class="container ">
+</div>
+<div class="container">
 <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
       <table class="table">
@@ -132,6 +133,7 @@
               </tr>
             </tbody>
           </table>
+          <br>
       <table class="table">
             <thead>
               <tr>
@@ -158,6 +160,8 @@
           </table>
       </div>
     </div>
+
+
   <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
       <h5>เขตที่ 1</h5>
