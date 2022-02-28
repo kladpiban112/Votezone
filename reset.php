@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-
+$conn->query("SET NAMES 'utf8'");
 $conn->query("UPDATE campur SET zone='0'");
 $conn->query("UPDATE ctambon SET zone='0'");
 $conn->query("UPDATE zone SET flag='0'");
