@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <?php include 'connect.php';?>
 
 <form action="src/dashboard.php" method="get">
@@ -22,14 +24,15 @@
 </div>
 
 <div class="container-fluid mt-3">
-<?php $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull FROM  campur cm  WHERE cm.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
+<?php 
+$amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull as a_code FROM  campur cm  WHERE cm.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
                 $num = 0;
                 while($row = $amper->fetch_object()){
                     if($num == 0){
                     echo"<div class='row'>";
                     }
                     echo"<div class='col-sm-3'>";
-                    echo "<input type='checkbox' name='ampur[]' value='".$row->M."'>  $row->M  ";
+                    echo "<input class='ampurcode' type='checkbox' name='ampur[]' value='".$row->a_code."'>  $row->M  ";
                     echo "</div>";
                     $num++;
                     if($num == 4){
@@ -47,23 +50,24 @@
 <h5 style="color:#0066ff;" href="*">เลือกตำบลเขตเลือกตั้ง</h5>
 </div>
 
-<div class="container-fluid mt-3">
-<?php $amper = $conn->query("SELECT *, ct.tambonname as T FROM ctambon ct WHERE ct.changwatcode = '30' AND zone = '0' AND ct.male != '0'");
-                $num = 0;
-                while($row = $amper->fetch_object()){
-                    if($num == 0){
-                    echo"<div class='row'>";
-                    }
-                    echo"<div class='col-sm-3'>";
-                    echo "<input type='checkbox' name='ctambon[]' value='".$row->T."'>  $row->T  ";
-                    echo "</div>";
-                    $num++;
-                    if($num == 4){
-                        echo "</div>";
-                        $num = 0;
-                    }
+<div class="container-fluid mt-3" id='tambon'>
+<?php 
+// $amper = $conn->query("SELECT *, ct.tambonname as T FROM ctambon ct WHERE ct.changwatcode = '30' AND zone = '0' AND ct.male != '0'");
+//                 $num = 0;
+//                 while($row = $amper->fetch_object()){
+//                     if($num == 0){
+//                     echo"<div class='row'>";
+//                     }
+//                     echo"<div class='col-sm-3'>";
+//                     echo "<input type='checkbox' name='ctambon[]' value='".$row->T."'>  $row->T  ";
+//                     echo "</div>";
+//                     $num++;
+//                     if($num == 4){
+//                         echo "</div>";
+//                         $num = 0;
+//                     }
                     
-                }
+//                 }
             ?>
 </div>
 
@@ -76,3 +80,42 @@
 </div>
 
             </from>
+
+
+
+    <script>
+        var tambonValue = ""; 
+        $('.ampurcode').click(function(e){
+            var checkedValue = ""; 
+            var inputElements = document.getElementsByClassName('ampurcode');
+            var num = 0;
+            for(var i=0; inputElements[i]; ++i){
+                if(inputElements[i].checked){
+                    if(num == 0)
+                    {
+                        checkedValue = checkedValue +" AND ampurcode = '"+ inputElements[i].value+"'";
+                        num = 1;
+                    }else if(num == 1){
+                        checkedValue = checkedValue +" OR ampurcode = '"+ inputElements[i].value+"'";
+                    }
+                }
+            }
+            tambonValue = checkedValue;
+            var xhttp;
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("tambon").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "showtambon.php?ampurcode="+tambonValue, true);
+            xhttp.send();
+
+        });
+
+
+    </script>
+
+   
+
+    
