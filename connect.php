@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "thaiakitec_demo1";
-$password = "demo12022**";
-$dbname = "thaiakitec_demo1";
+$username = "root";
+$password = "";
+$dbname = "votezone_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
