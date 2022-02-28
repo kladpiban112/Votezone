@@ -16,7 +16,7 @@ $tambon = $_GET['ctambon'];
 
 $conn->query("UPDATE zone SET flag='1' WHERE zonecode='".$_GET['ket']."'");
 
-// optional
+// optional  
 // echo "You chose the following color(s): <br>";
 foreach ($ampur as $amp){ 
     // print $amp."<br />";
