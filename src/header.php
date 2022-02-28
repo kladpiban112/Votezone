@@ -12,21 +12,6 @@
 
         }
     ?>
-<!-- 
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="6">6</option>
-  <option value="7">7</option>
-  <option value="8">8</option>
-  <option value="9">9</option>
-  <option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>
-  <option value="13">13</option>
-  <option value="14">14</option> -->
 </select>
 </div>
 
@@ -37,7 +22,7 @@
 </div>
 
 <div class="container-fluid mt-3">
-<?php $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone FROM  campur cm  WHERE cm.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
+<?php $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull FROM  campur cm  WHERE cm.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
                 $num = 0;
                 while($row = $amper->fetch_object()){
                     if($num == 0){
