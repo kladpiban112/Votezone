@@ -16,7 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Latest compiled JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <meta name="Description" content="HomePage">
 
@@ -41,6 +41,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="text-body nav-link" href="home.php">Home</a>
+        </li>
         <li class="nav-item active">
           <a class="text-primary nav-link" href="ShowDasbord.php">Dashboard</a>
         </li>
