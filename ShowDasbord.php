@@ -100,7 +100,7 @@
       }
    ?>
 
-<div class="container">
+<div class="container ">
 <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
       <table class="table">
@@ -130,7 +130,6 @@
       <table class="table">
             <thead>
               <tr>
-
                 <th>เขต 8</th>
                 <th>เขต 9</th>
                 <th>เขต 10</th>

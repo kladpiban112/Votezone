@@ -42,6 +42,9 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
+          <a class="text-body nav-link" href="home.php">Home</a>
+        </li>
+        <li class="nav-item active">
           <a class="text-primary nav-link" href="ShowDasbord.php">Dashboard</a>
         </li>
         <li class="nav-item active">
