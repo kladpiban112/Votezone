@@ -6,7 +6,7 @@
 <div>
 <h4 style="color:#0066ff;" href="*">เลือกเขต</h4>
 <select class="form-select" name ="ket" id="ket">
-  <option>เขต</option>
+  <option disabled selected value >เขต</option>
   <?php $zone=$conn->query("SELECT * FROM zone WHERE flag='0'");
 
         while ($z = $zone->fetch_object()) {
