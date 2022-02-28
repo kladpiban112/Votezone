@@ -37,7 +37,7 @@
 </div>
 
 <div class="container-fluid mt-3">
-<?php $amper = $conn->query("SELECT ch.changwatname,cm.ampurname as M ,cm.zone FROM cchangwat ch LEFT JOIN campur cm ON cm.changwatcode = ch.changwatcode WHERE ch.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
+<?php $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone FROM  campur cm  WHERE cm.changwatcode = '30' AND cm.zone = '0' ORDER by cm.ampurcode");
                 $num = 0;
                 while($row = $amper->fetch_object()){
                     if($num == 0){
