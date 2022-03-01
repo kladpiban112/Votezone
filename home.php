@@ -96,7 +96,7 @@
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonText: 'Yes, Reset it !'
       }).then((result) => {
         if (result.isConfirmed) {
           jQuery.ajax({
@@ -105,8 +105,8 @@
             data: {}, 
             success:function(data) { 
               Swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
+              'Reset!',
+              'Your file has been Reset.',
               'success'
             ).then((value) => {
                     window.location.replace("home.php");
