@@ -3,17 +3,7 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Votezone_db";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $ampur = $_GET['ampur'];
 $tambon = $_GET['ctambon'];
