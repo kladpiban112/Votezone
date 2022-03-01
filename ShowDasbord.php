@@ -109,16 +109,16 @@
 <div class="container">
 <div class="card border-0 shadow my-5">
     <div class="card-body p-5">
-      <table class="table">
+      <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th>เขต 1</th>
-                <th>เขต 2</th>
-                <th>เขต 3</th>
-                <th>เขต 4</th>
-                <th>เขต 5</th>
-                <th>เขต 6</th>
-                <th>เขต 7</th>
+                <th class="text-center" >เขต 1</th>
+                <th class="text-center" >เขต 2</th>
+                <th class="text-center" >เขต 3</th>
+                <th class="text-center" >เขต 4</th>
+                <th class="text-center" >เขต 5</th>
+                <th class="text-center" >เขต 6</th>
+                <th class="text-center" >เขต 7</th>
               </tr>
             </thead>
             <tbody>
@@ -134,16 +134,16 @@
             </tbody>
           </table>
           <br>
-      <table class="table">
+      <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th>เขต 8</th>
-                <th>เขต 9</th>
-                <th>เขต 10</th>
-                <th>เขต 11</th>
-                <th>เขต 12</th>
-                <th>เขต 13</th>
-                <th>เขต 14</th>
+                <th class="text-center" >เขต 8</th>
+                <th class="text-center" >เขต 9</th>
+                <th class="text-center" >เขต 10</th>
+                <th class="text-center" >เขต 11</th>
+                <th class="text-center" >เขต 12</th>
+                <th class="text-center" >เขต 13</th>
+                <th class="text-center" >เขต 14</th>
               </tr>
             </thead>
             <tbody>
