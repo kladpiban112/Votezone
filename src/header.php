@@ -1,8 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <?php include 'connect.php';?>
-
-<form action="src/dashboard.php" method="get">
+<form name="frmMr" action="src/dashboard.php" method="get">
 <div>
 <h4 style="color:#0066ff;" href="*">เลือกเขต</h4>
 <select class="form-select" name ="ket" id="ket">
@@ -51,24 +49,7 @@ $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull as a_c
 </div>
 
 <div class="container-fluid mt-3" id='tambon'>
-<?php 
-// $amper = $conn->query("SELECT *, ct.tambonname as T FROM ctambon ct WHERE ct.changwatcode = '30' AND zone = '0' AND ct.male != '0'");
-//                 $num = 0;
-//                 while($row = $amper->fetch_object()){
-//                     if($num == 0){
-//                     echo"<div class='row'>";
-//                     }
-//                     echo"<div class='col-sm-3'>";
-//                     echo "<input type='checkbox' name='ctambon[]' value='".$row->T."'>  $row->T  ";
-//                     echo "</div>";
-//                     $num++;
-//                     if($num == 4){
-//                         echo "</div>";
-//                         $num = 0;
-//                     }
-                    
-//                 }
-            ?>
+
 </div>
 
 <hr>
@@ -76,12 +57,10 @@ $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull as a_c
 <br>
 
 <div class="d-grid">
-  <button class="btn btn-primary btn-block" type="submit" >ตกลง</button>
+  <button class="btn btn-primary btn-block" type="submit" onclick="return checkform()">ตกลง</button>
 </div>
 
             </from>
-
-
 
     <script>
         var tambonValue = ""; 
@@ -112,10 +91,23 @@ $amper = $conn->query("SELECT cm.ampurname as M ,cm.zone,cm.ampurcodefull as a_c
             xhttp.send();
 
         });
-
-
+   
     </script>
 
-   
+   <script>
+       function checkform() {
+        console.log($('.ampurcode'));
+            if($('#ket').val() == null ) {
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                })
+                return false;
+            } else {
+                // document.frmMr.submit();
+            }
+        }
+   </script>
 
     

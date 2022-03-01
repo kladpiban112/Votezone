@@ -25,6 +25,11 @@
   <link rel="shortcut icon" href="image"/>
 
   <link rel="stylesheet" href="src/style.css">
+  <!-- Sweetalert2-->
+  <!-- <script src="https://npmcdn.com/sweetalert2@4.0.15/dist/sweetalert2.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- ajax-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
  </head>
  <!--end::Head-->

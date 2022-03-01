@@ -11,7 +11,7 @@
         echo"<div class='row'>";
         }
         echo"<div class='col-sm-3'>";
-        echo "<input type='checkbox' name='ctambon[]' value='".$row->tambonname."'>  $row->tambonname  ";
+        echo "<input class='tambon' type='checkbox' name='ctambon[]' value='".$row->tamboncodefull."'>  $row->tambonname  ";
         echo "</div>";
         $num++;
         if($num == 4){
