@@ -53,7 +53,7 @@
           <a class="text-primary nav-link" href="ShowDasbord.php">Dashboard</a>
         </li>
         <li class="nav-item active">
-          <a class="text-danger nav-link" type="btn btn-danger" href="reset.php">Reset</a>
+          <a class="text-danger nav-link" type="btn btn-danger" onclick="reset()">Reset</a>
         </li>
       </ul>
     </div>
@@ -75,10 +75,6 @@
 <!-- end card-body -->
 
 
-
-
-
-
 <div style="height: 50px"></div>
 <!-- endcard -->
 
@@ -90,3 +86,34 @@
    
  </body>
 </html>
+
+
+<script>
+  function reset() {
+    Swal.fire({
+      title: 'Are you sure?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          jQuery.ajax({
+            type: "POST",
+            url: 'reset.php',
+            data: {}, 
+            success:function(data) { 
+              Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            ).then((value) => {
+                    window.location.replace("home.php");
+                }); 
+            }
+          })
+      }
+    })
+  }    
+</script>
