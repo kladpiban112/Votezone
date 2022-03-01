@@ -53,7 +53,7 @@
           <a class="text-primary nav-link" href="ShowDasbord.php">Dashboard</a>
         </li>
         <li class="nav-item active">
-          <a class="text-danger nav-link" type="btn btn-danger" onclick="reset()">Reset</a>
+          <a class="text-danger nav-link" type="btn btn-danger" href="#" onclick="reset()" >Reset</a>
         </li>
       </ul>
     </div>
