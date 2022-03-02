@@ -21,6 +21,8 @@
   <!-- Sweet Alert -->
   <script src="sweetalert2.min.js"></script>
   <link rel="stylesheet" href="sweetalert2.min.css">
+   <!-- ajax-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <meta name="Description" content="HomePage">
 
@@ -52,7 +54,10 @@
     section:nth-child(odd) {
       background: #d12525;
     }
-
+    .btnToTop {
+      display : none;
+    }
+    
     .btnToTop svg {
       width: 44px;
       height: 44px;
@@ -536,30 +541,30 @@
 </html>
 <!-- back to scrollTop -->
 <script>
-    const btnToTop = document.querySelector('.btnToTop');
+    let btnToTop = document.querySelector(".btnToTop");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
 
-    // 1. window.scrollTo()
-    // btnToTop.addEventListener('click', () => {
-    //   window.scrollTo(0, 0);
-    // })
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        btnToTop.style.display = "block";
+      } else {
+        btnToTop.style.display = "none";
+      }
+    }
 
-    // 2. window.scroll()
-    // btnToTop.addEventListener('click', () => {
-    //   window.scroll({
-    //     top: 0,
-    //     behavior: 'smooth'
-    //   })
-    // })
+    // When the user clicks on the button, scroll to the top of the document
+    btnToTop.addEventListener("click", backToTop);
 
-    // 3. document.documentElement.scrollTop()
-    // btnToTop.addEventListener('click', () => {
-    //   document.documentElement.scrollTop = 0;
-    // })
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
 
-    // 4. document.documentElement.scrollIntoView()
-    btnToTop.addEventListener('click', () => {
-      document.documentElement.scrollIntoView({
-        behavior: 'smooth'
-      })
-    })
 </script>
+<!-- END back to scrollTop -->
