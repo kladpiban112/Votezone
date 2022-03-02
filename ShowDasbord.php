@@ -18,7 +18,6 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
   <!-- Sweet Alert -->
   <script src="sweetalert2.min.js"></script>
   <link rel="stylesheet" href="sweetalert2.min.css">
@@ -30,6 +29,49 @@
   <link rel="shortcut icon" href="image"/>
 
   <link rel="stylesheet" href="src/style.css">
+  <style>
+    a{
+      text-decoration: none;
+      color:black;
+      }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* html {
+      scroll-behavior: smooth;
+    } */
+
+    section {
+      width: 100%;
+      height: 70vh;
+    }
+
+    section:nth-child(odd) {
+      background: #d12525;
+    }
+
+    .btnToTop svg {
+      width: 44px;
+      height: 44px;
+      padding: 9px;
+      border-radius: 7px;
+      background: #6e6e6e;
+      fill: #c2c2c2;
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      transition: all .1s ease-in-out;
+      cursor: pointer;
+    }
+
+    .btnToTop svg:hover {
+      background: #222222;
+      fill: #d1d1d1;
+    }
+  </style> 
 
  </head>
  <!--end::Head-->
@@ -112,13 +154,13 @@
       <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th class="text-center" >เขต 1</th>
-                <th class="text-center" >เขต 2</th>
-                <th class="text-center" >เขต 3</th>
-                <th class="text-center" >เขต 4</th>
-                <th class="text-center" >เขต 5</th>
-                <th class="text-center" >เขต 6</th>
-                <th class="text-center" >เขต 7</th>
+                <th class="text-center" ><a href="#ket1" >เขต 1</a></th>
+                <th class="text-center" ><a href="#ket2" >เขต 2</a></th>
+                <th class="text-center" ><a href="#ket3" >เขต 3</a></th>
+                <th class="text-center" ><a href="#ket4" >เขต 4</a></th>
+                <th class="text-center" ><a href="#ket5" >เขต 5</a></th>
+                <th class="text-center" ><a href="#ket6" >เขต 6</a></th>
+                <th class="text-center" ><a href="#ket7" >เขต 7</a></th>
               </tr>
             </thead>
             <tbody>
@@ -137,13 +179,13 @@
       <table class="table table-striped table-bordered">
             <thead>
               <tr>
-                <th class="text-center" >เขต 8</th>
-                <th class="text-center" >เขต 9</th>
-                <th class="text-center" >เขต 10</th>
-                <th class="text-center" >เขต 11</th>
-                <th class="text-center" >เขต 12</th>
-                <th class="text-center" >เขต 13</th>
-                <th class="text-center" >เขต 14</th>
+                <th class="text-center" ><a href="#ket8" >เขต 8</a></th>
+                <th class="text-center" ><a href="#ket9" >เขต 9</a></th>
+                <th class="text-center" ><a href="#ket10" >เขต 10</a></th>
+                <th class="text-center" ><a href="#ket11" >เขต 11</a></th>
+                <th class="text-center" ><a href="#ket12" >เขต 12</a></th>
+                <th class="text-center" ><a href="#ket13" >เขต 13</a></th>
+                <th class="text-center" ><a href="#ket14" >เขต 14</a></th>
               </tr>
             </thead>
             <tbody>
@@ -162,7 +204,7 @@
     </div>
 
 
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket1">
     <div class="card-body p-5">
       <h5>เขตที่ 1</h5>
       <br>
@@ -186,7 +228,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket2">
     <div class="card-body p-5">
       <h5>เขตที่ 2</h5>
       <br>
@@ -209,7 +251,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket3">
     <div class="card-body p-5">
       <h5>เขตที่ 3</h5>
       <br>
@@ -232,7 +274,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket4">
     <div class="card-body p-5">
       <h5>เขตที่ 4</h5>
       <br>
@@ -255,7 +297,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket5">
     <div class="card-body p-5">
       <h5>เขตที่ 5</h5>
       <br>
@@ -278,7 +320,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket6">
     <div class="card-body p-5">
       <h5>เขตที่ 6</h5>
       <br>
@@ -301,7 +343,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket7">
     <div class="card-body p-5">
       <h5>เขตที่ 7</h5>
       <br>
@@ -324,7 +366,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket8">
     <div class="card-body p-5">
       <h5>เขตที่ 8</h5>
       <br>
@@ -347,7 +389,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket9">
     <div class="card-body p-5">
       <h5>เขตที่ 9</h5>
       <br>
@@ -370,7 +412,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket10">
     <div class="card-body p-5">
       <h5>เขตที่ 10</h5>
       <br>
@@ -393,7 +435,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket11">
     <div class="card-body p-5">
       <h5>เขตที่ 11</h5>
       <br>
@@ -416,7 +458,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket12">
     <div class="card-body p-5">
       <h5>เขตที่ 12</h5>
       <br>
@@ -439,7 +481,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket13">
     <div class="card-body p-5">
       <h5>เขตที่ 13</h5>
       <br>
@@ -462,7 +504,7 @@
   </div>
 
   <div class="container">
-  <div class="card border-0 shadow my-5">
+  <div class="card border-0 shadow my-5" id="ket14">
     <div class="card-body p-5">
       <h5>เขตที่ 14</h5>
       <br>
@@ -485,7 +527,39 @@
   </div>
 
 <!-- endcard -->  
-
-
+  <div class="btnToTop">
+    <button>
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve"> <g> <path d="M282.082,195.285L149.028,62.24c-1.901-1.903-4.088-2.856-6.562-2.856s-4.665,0.953-6.567,2.856L2.856,195.285 C0.95,197.191,0,199.378,0,201.853c0,2.474,0.953,4.664,2.856,6.566l14.272,14.271c1.903,1.903,4.093,2.854,6.567,2.854 c2.474,0,4.664-0.951,6.567-2.854l112.204-112.202l112.208,112.209c1.902,1.903,4.093,2.848,6.563,2.848 c2.478,0,4.668-0.951,6.57-2.848l14.274-14.277c1.902-1.902,2.847-4.093,2.847-6.566 C284.929,199.378,283.984,197.188,282.082,195.285z"/> </g> </svg>
+    </button>
+  </div>
  </body>
 </html>
+<!-- back to scrollTop -->
+<script>
+    const btnToTop = document.querySelector('.btnToTop');
+
+    // 1. window.scrollTo()
+    // btnToTop.addEventListener('click', () => {
+    //   window.scrollTo(0, 0);
+    // })
+
+    // 2. window.scroll()
+    // btnToTop.addEventListener('click', () => {
+    //   window.scroll({
+    //     top: 0,
+    //     behavior: 'smooth'
+    //   })
+    // })
+
+    // 3. document.documentElement.scrollTop()
+    // btnToTop.addEventListener('click', () => {
+    //   document.documentElement.scrollTop = 0;
+    // })
+
+    // 4. document.documentElement.scrollIntoView()
+    btnToTop.addEventListener('click', () => {
+      document.documentElement.scrollIntoView({
+        behavior: 'smooth'
+      })
+    })
+</script>
