@@ -23,11 +23,11 @@ foreach ($tambon as $tam){
 echo "<script language='javascript'>
       $(document).ready(function(){
         Swal.fire({
-        position: 'top',
         icon: 'success',
         title: 'บันทึกสำเร็จ',
+        text: 'สามารถตรวจสอบได้ที่ หน้า Dashbord',
         showConfirmButton: false,
-        timer: 1500
+        timer: 2500
         }).then((value) => {
         window.location.replace('../home.php');
         })})</script>";
