@@ -9,7 +9,6 @@
 
         while ($z = $zone->fetch_object()) {
             echo "<<option value='".$z->zonecode."'>".$z->zonecode."</option>>";
-
         }
     ?>
 </select>
@@ -35,7 +34,6 @@
             echo "</div>";
             $num = 0;
         }
-        
     }
 ?>
 </div>
@@ -56,9 +54,7 @@
 <div class="d-grid">
   <button class="btn btn-primary btn-block" type="submit" onclick="return checkform()">ตกลง</button>
 </div>
-
             </from>
-
     <script>
     var tambonValue = ""; 
     $('.ampurcode').click(function(e){
@@ -115,6 +111,4 @@
                 document.frmMr.submit();
             }
         }   
-   </script>
-
-    
+   </script>    
